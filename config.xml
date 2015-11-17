@@ -1,0 +1,7 @@
+<config>
+    <item>
+        <start>paint start</start>
+        <end>paint end</end>
+        <signature>8,15</signature>
+    </item>
+</config>
