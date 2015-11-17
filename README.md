@@ -16,8 +16,8 @@ Log parser for First project
 	```xml
 	<config>
 		<item>
-			<start>xxx start</start>
-			<end>xxx end</end>
+			<start>paint start</start>
+			<end>paint end</end>
 			<signature>8,15</signature>
 		</item>
 	</config>	
@@ -35,7 +35,10 @@ Log parser for First project
 
 |Type|Start|End|Duration|Address|StartMsg|EndMsg|
 |----|-----|------|:--------:|-------|-----|------|
-|Webkit|12:29:10|12:29:20|12|0x11011|Webkit:(0x11011) paint start|Webkit:(0x11011)paint end|
+|Webkit|12:29:10|12:29:20|10|0x11011|Webkit:(0x11011) paint start|Webkit:(0x11011)paint end|
+|gethostbyname|12:30:10|12:30:22|12|www.baidu.com|gethostbyname:(www.baidu.com) start|gethostbyname:(www.baidu.com) end|
 
+2. 输出文件中只保存成对出现的log message字段之间以`一个制表符`相隔，可导入excel
+3. 日志文件中不配对的log message被丢弃，不做统计
 
 
