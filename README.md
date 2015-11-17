@@ -41,4 +41,14 @@ Log parser for First project
 * 输出文件中只保存成对出现的log message，字段之间以`一个制表符`相隔，可导入excel中进一步分析
 * 日志文件中不配对的log message被丢弃，不做统计
 
+##注意
+1. 配置文件config.xml 与 程序文件parser.py 需要放在同一目录下
 
+
+##TODO
+1. 实际Log文件测试
+2. 超大文件性能测试
+1. 多字段同时分析
+	* config.xml可配置多个关键字段
+	* 每个关键字段分别输出分析结果
+2. 正则表达式支持
