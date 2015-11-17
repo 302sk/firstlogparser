@@ -31,14 +31,14 @@ Log parser for First project
 	```  
 	
 ##输出
-1. 输出的文件以如下格式存储结果(不包含表头)
+* 输出的文件以如下格式存储结果(不包含表头)
 
 |Type|Start|End|Duration|Address|StartMsg|EndMsg|
 |----|-----|------|:--------:|-------|-----|------|
-|Webkit|12:29:10|12:29:20|10|0x11011|Webkit:(0x11011) paint start|Webkit:(0x11011)paint end|
+|Webkit|12:29:10|12:29:20|10|0x11011|Webkit:(0x11011)paint start|Webkit:(0x11011)paint end|
 |gethostbyname|12:30:10|12:30:22|12|www.baidu.com|gethostbyname:(www.baidu.com) start|gethostbyname:(www.baidu.com) end|
 
-2. 输出文件中只保存成对出现的log message字段之间以`一个制表符`相隔，可导入excel
-3. 日志文件中不配对的log message被丢弃，不做统计
+* 输出文件中只保存成对出现的log message，字段之间以`一个制表符`相隔，可导入excel中进一步分析
+* 日志文件中不配对的log message被丢弃，不做统计
 
 
