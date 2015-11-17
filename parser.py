@@ -3,6 +3,7 @@ import re
 import time
 import sys, getopt
 import xml.etree.ElementTree as ET
+import os
 
 LOG_START = 0
 LOG_END = 1
@@ -126,13 +127,16 @@ def main(argv):
     keyword = ''
     start_key, end_key, signature = load_config('config.xml')
     inputfile, outputfile = load_param(argv)
-    print "inputfile:", inputfile, "output ", outputfile
+    print "Log file: ", inputfile
+    print "Output file: ", outputfile
     if inputfile == '' or outputfile == '':
         print 'parser.py -i <inputfile> -o <outputfile>'
         sys.exit()
+    log_size = float(os.stat(inputfile).st_size)
     log_file = open(inputfile, "r")
     o_file = open(outputfile, "w")
     for line in log_file:
+        print '\r >> ', str(int((log_file.tell()/log_size) * 100)), '% completed',
         log = parse_line(line)
         log_type = find_keyword(start_key, end_key, log['content'])
         if log_type == LOG_NONE:
