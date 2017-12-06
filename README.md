@@ -1,12 +1,12 @@
 # First Log Parser
 Log parser for First project
 
-##使用环境
+## 使用环境
 1. python 2.7以上
 2. First项目输出的日志文件
 3. 配置文件config.xml
 
-##使用方法
+## 使用方法
 1. 参数配置  
 	* start标签表示配对log中开始的那一条中**必然包含**的关键字（用于搜索开始log）
 	* end标签与start配对试用，存储配对log中结束那一条中**必然包含**的关键字
@@ -30,7 +30,7 @@ Log parser for First project
 	python parser.py -i logfile -o outputfile
 	```  
 	
-##输出
+## 输出
 * 输出的文件以如下格式存储结果(不包含表头)
 
 |Type|Start|End|Duration|Address|StartMsg|EndMsg|
@@ -41,11 +41,11 @@ Log parser for First project
 * 输出文件中只保存成对出现的log message，字段之间以`一个制表符`相隔，可导入excel中进一步分析
 * 日志文件中不配对的log message被丢弃，不做统计
 
-##注意
+## 注意
 1. 配置文件config.xml 与 程序文件parser.py 需要放在同一目录下
 
 
-##TODO
+## TODO
 1. 实际Log文件测试
 2. 超大文件性能测试
 1. 多字段同时分析
